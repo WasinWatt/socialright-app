@@ -1,50 +1,40 @@
 import React, { Component } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Home from './pages/Home'
+import DetectList from './pages/DetectList'
+import DetectContent from './pages/DetectContent'
+import Upload from './pages/Upload'
 import { Button } from 'semantic-ui-react'
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import createBrowserHistory from 'history/createBrowserHistory'
 import logo from './logo.svg'
-import './App.css'
 
+const history = createBrowserHistory()
 class App extends Component {
   render() {
     return (
-      	<div className="App">
-			<Navbar/>
-			<div className="home header">
-			{/* <img src="assets/homebackground.jpg" width="100%" /> */}
-				<div className="text">
-					<h1> Your precious works belong to you. And you only. </h1>
-					<p>We uses our latest technologies to detect illegal copies online and notifies
-					you everything you need. So you can continue creating amazing stuff to the world !</p>
-					<Button size="huge" color='green'>Learn more</Button>
+		<Router history={history}>
+			<div className="App">
+				<Navbar/>
+				<div>
+					<Switch>
+						<Route exact path="/" component={Home} />
+						<Route path="/my-contents" component={Upload} />
+						<Route path="/detect-list" component={DetectList} />
+						<Route path="/the-sunset-boat" component={DetectContent} />
+						<Route path="" render={() => {
+							return (
+								<div>
+									<h1> Error 404: page not found </h1>
+								</div>
+							)
+						}} />
+					</Switch>
 				</div>
+				<Footer/>
 			</div>
-			<div className="home about">
-				<img src="assets/push-noti.png" height="400px"/>
-				<h3>Get notified when ever your works were being used illegally.</h3>
-			</div>
-			<div className="home features">
-				<div className="usecases">
-					<div className="feature">
-						<img src="assets/magnify-icon.png"/>
-						<h3>Autodetect</h3>
-						<p>Detect your works online continuously</p>
-					</div>
-					<div className="feature">
-						<img src="assets/bell-icon.png" />
-						<h3>Notify</h3>
-						<p>Notify you immediately whenever we found your precious works!</p>
-					</div>
-					<div className="feature">
-						<img src="assets/spy-icon.png" />
-						<h3>Pursue</h3>
-						<p>We will do the hard process for you</p>
-					</div>
-				</div>
-				<Button color="green" size="huge">Try it for free!</Button>
-			</div>
-			<Footer/>
-      </div>
+		</Router>
     );
   }
 }

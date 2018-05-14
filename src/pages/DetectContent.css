@@ -1,0 +1,9 @@
+#detect-content {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#detect-content img {
+    border-radius: 0% !important;
+}
