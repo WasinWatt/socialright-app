@@ -25,7 +25,7 @@ class App extends Component {
 						<Route path="/my-contents" component={Upload} />
 						<Route path="/detect-list" component={DetectList} />
 						<Route path="/case-list" component={CaseList} />
-						<Route path="/the-sunset-boat" component={DetectContent} />
+						<Route path="/found" component={DetectContent} />
 						<Route path="/case-boat" component={Case} />
 						<Route path="" render={() => {
 							return (

@@ -19,7 +19,7 @@ class DetectList extends Component {
         } else if (name == 'cases') {
             this.props.history.push('/case-list')
         } else {
-            this.props.history.push('/history')
+            this.props.history.push('/case-list')
         } 
     }
 
@@ -39,12 +39,12 @@ class DetectList extends Component {
                     </Menu.Item>
 
                     <Menu.Item name='cases' active={this.state.activeItem === 'cases'} onClick={this.handleItemClick}>
-                        <Label color={this.state.activeItem === 'cases' ? 'green' : undefined}>1</Label>
+                        <Label color={this.state.activeItem === 'cases' ? 'green' : undefined}>2</Label>
                         Cases
                     </Menu.Item>
 
                     <Menu.Item name='history' active={this.state.activeItem === 'history'} onClick={this.handleItemClick}>
-                        <Label color={this.state.activeItem === 'history' ? 'green' : undefined}>2</Label>
+                        <Label color={this.state.activeItem === 'history' ? 'green' : undefined}>0</Label>
                         History
                     </Menu.Item>
                     <Menu.Item>
