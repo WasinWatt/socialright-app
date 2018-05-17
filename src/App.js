@@ -5,6 +5,8 @@ import Home from './pages/Home'
 import DetectList from './pages/DetectList'
 import DetectContent from './pages/DetectContent'
 import Upload from './pages/Upload'
+import CaseList from './pages/CaseList'
+import Case from './pages/Case'
 import { Button } from 'semantic-ui-react'
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import createBrowserHistory from 'history/createBrowserHistory'
@@ -22,7 +24,9 @@ class App extends Component {
 						<Route exact path="/" component={Home} />
 						<Route path="/my-contents" component={Upload} />
 						<Route path="/detect-list" component={DetectList} />
+						<Route path="/case-list" component={CaseList} />
 						<Route path="/the-sunset-boat" component={DetectContent} />
+						<Route path="/case-boat" component={Case} />
 						<Route path="" render={() => {
 							return (
 								<div>

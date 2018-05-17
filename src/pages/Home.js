@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Button } from 'semantic-ui-react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import './Home.css'
 
 class Home extends Component {
@@ -39,11 +39,11 @@ class Home extends Component {
                             <p>We will do the hard process for you</p>
                         </div>
                     </div>
-                    <Link to="/detect-list"><Button color="green" size="huge">Try it for free!</Button></Link>
+                    <Button color="green" size="huge" onClick={()=> this.props.history.push('/my-contents')}>Try it for free!</Button>
                 </div>
             </div>
         );
     }
 }
 
-export default Home;
+export default withRouter(Home)

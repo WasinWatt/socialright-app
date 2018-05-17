@@ -26,8 +26,8 @@ class DetectContent extends Component {
                             <p><a>https://www.fakeurl.co.th/your_picture</a></p>
                             <Button color="orange">Pursue</Button>
                             <hr style={{marginTop: "5vmin"}}/>
-                            <p>By choosing to pursue, our team will 
-                                contact the owner of the content about the copyright issue.</p>
+                            <p>By choosing to pursue, our team will
+                            contact the owner of the content about this copyright issue.</p>
                         </div>
                     </div>
                 </div>

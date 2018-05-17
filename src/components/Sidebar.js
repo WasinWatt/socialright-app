@@ -17,7 +17,7 @@ class DetectList extends Component {
         } else if (name == 'detects') {
             this.props.history.push('/detect-list')
         } else if (name == 'cases') {
-            this.props.history.push('/cases')
+            this.props.history.push('/case-list')
         } else {
             this.props.history.push('/history')
         } 
